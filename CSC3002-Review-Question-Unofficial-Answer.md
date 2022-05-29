@@ -404,3 +404,83 @@ int fib(int n){
 
 ## Ch9 Backtracking Algorithms
 
+1. Iterative
+2. Put your right hand on the wall and follow. Yes.
+
+![ch9a](images/ch9a.png)
+
+![ch9b](images/ch9b.png)
+
+3. At least one sub-problem has a solution (all choice for the direction)
+4. Walk out of maze (To the end) or no available direction to choose.
+5. Avoid calculating the sub-problem repetitively. May cause infinite loop
+6. If all directions in the for loop ends up with no solution, it should unmark and try other solution in the previous step. A successful solution may go through part of the failed trial path. Yes.
+7. Judge whether the sub-problem has a solution and transfer the information to previous/next step. Also, to end the for loop.
+8. Try all four directions and move by one step each time to check whether there is a solution starting from the current position.
+9. Bad. Whatever you pick (say $i$), your opponent will pick ($4 - i$) coins, and finally leaves the last one for human player.
+
+![ch9c](images/ch9c.png)
+
+![ch9d](images/ch9d.png)
+
+10. If nCoins is (4n + 1) then it’s bad, otherwise it’s good. (Can pick 1/2/3 each time)
+11. Minimize the maximum of your opponents’ rating. Consider your opponents, game theory
+12. To apply in a more general sense. Have a grasp of the ideology.
+13. Pass the information of individual step during the backtracking. Judge whether reaching the end and terminate.
+14.   ![ch9e](images/ch9e.png)
+
+15. To maximize your minimum score. The second position. -3.
+
+
+
+**In the following chapters, some questions are not covered in the lecture, so they will be skipped.**
+
+
+
+## Ch10 Algorithmic Analysis
+
+1. Iterative > recursive
+
+2. Make the item in order
+3. The first `lh` numbers is already in order, iterating them brings extra cost.
+
+![ch10a](images/ch10a.png)
+
+4. Selection sort is $O(N²)$, $50 * (1000/250)² = 800 ms$
+5. $(N + 1) * N / 2$
+6. /
+7. True. 
+8. /
+9. Yes. It is just the same as $O(N^2)$
+
+![ch10b](images/ch10b.png)
+
+10. Yes. Selection sort $f(n) = O(N^2) <= O(N^3)$ Only if it’s “smaller or equal than”.
+11. No. $O(N\log N) < O(N^2)$
+12. $O(N^2)$
+13. $O(1)$  (constant)
+14. /
+15.   ![ch10c](images/ch10c.png)
+
+16. Merge compare the two arrays one by one and pick the smaller one out each time. All the numbers are iterated exactly once.
+
+17. It doesn’t matter. The two lines just put the remaining numbers (the largest ones) at the end of the ordered array. Only one array has remains so pick any of the two is ok.
+
+18. /
+
+19. Can be expressed as a power of N.
+
+20. Whether the complexity is exponential.
+
+21. ![ch10d](images/ch10d.png)
+
+    ![ch10e](images/ch10e.png)
+
+22. $O(N^2)$ (consider a completely ordered reversed array, each time you iterate the whole array but can only identify one position but not make a good partition) $O(N\log N)$
+23. Base case $\to$ Iterative step
+24. /
+
+
+
+## Ch11 Pointers and Arrays
+
