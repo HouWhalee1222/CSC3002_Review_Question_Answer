@@ -117,3 +117,125 @@
 
 ## Ch3 Strings
 
+1. String is the combination of characters (superset).
+2. False (If there is a space, it will only read the part before the space)
+3. Both `istream` and `string`.
+
+![ch3a](images/ch3a.png)
+
+4. Method: string.size(). Use a dot after the variable. Function: getline(cin, string); Use a parentheses 
+
+5. False. It should be str.length() (method instead of function)
+
+6. s1. Method meaning: replace(pos, len, str) Start from index pos, replace string with length len with sting s2. Please view [docs](http://www.cplusplus.com/reference/string/string/replace/)
+
+7. Connect two strings.
+
+8. Start from head, compare the ASCII value of each character at the same position until difference. E.g. `“abc” < “abd”` (ASCLL value of ‘d’ is larger than ‘c’)
+
+9. `str[i]`, `str.at(i)`. The latter one will check whether the index is out of boundary.
+
+10. `[]` will not check effectiveness. `.at()` will throw out an exception of “out of range”
+
+11. True
+
+12. True
+
+13. `str.substr(pos, len)`. Start from index `pos`, return a cut string with length `len`. Omit the second parameter: Cut the string until the end. E.g. `“abcde”.substr(2)` is `“cde”`
+
+14. `string::npos`. Please view [docs](http://www.cplusplus.com/reference/string/string/find/)  **(?)**
+
+15. repeat with problem (13)
+
+16. It means the finding starts from index `pos`.
+
+17. `5`; `0`; `‘C’`; `“ABCDE”`; `“a”`; `“ZCDE”`; `“ABC”`; `“E”`; `“DE”`; `“DE”`.
+
+18. ```cpp
+    for (int i=0; i<str.length(); i++){/*do things with str[i]*/} 
+    for (char ch:string) {/*do things with ch*/}
+    ```
+
+19. ```cpp
+    for (int i=str.length()-1;i>=0;i--) {/*do things with str[i]*/}
+    ```
+
+20. Use `+` operator
+
+21. `False`; `True`; `False`; `7`; `‘A’`; `‘a’`.
+
+22. For the compatibility with C language.
+
+23. ```cpp
+    // string to char[]:
+    string str = "abc";
+    str.c_str();
+    // char[] to string:
+    char* cstr = "abc";
+    str = string(cstr)
+    ```
+
+
+
+## Ch4 Streams
+
+1. `fstream`, `ifstream`, `ofstream`
+
+2. `<<`: insertion operator  `>>`: extraction operator
+
+3. `<<` returns output stream (`cout`).  `>>` returns input stream (`cin`). To support chain operations.
+
+4. Operator to change format (`skipws`, `noskipws`, `ws`)
+
+5. Transient: take effect once; Persistent: take effect forever
+
+6. Fixed: fixed-point notation.
+
+   Scientific: scientific notation. 
+
+   Default: Round the float number and output.
+
+![ch4a](images/ch4a.png)
+
+![ch4b](images/ch4b.png)
+
+7. Please view the code and [materials](http://c.biancheng.net/view/275.html): 
+
+![ch4c](images/ch4c.png)
+
+![ch4d](images/ch4d.png)
+
+8. For file I/O operations: read file, write file. 
+
+9. When using open, one should convert the string to C-style string first. `fstreamName.open(filename.c_str());`
+
+10. Use `fstreamName.fail()`
+
+11. `fstreamName.get() == EOF` or `fstreamName.get() == fstreamName.eof()`
+
+12. There may be other characters like Chinese or Korean outside ASCII range (0~255).
+
+13. Read the character back to the stream. [additional materials](https://blog.csdn.net/RuizeMa/article/details/6149662)
+
+14. ```cpp
+    string stringVar;
+    while (getline(cin, stringVar)) {/*do things with stringVar*/}
+    ```
+
+    Just judge whether the return value of getline() is false;
+
+15. `stringstream` deals with string (commonly used scenario: type conversion). `fstream` deals with file read/write.
+16. subclass: subclass; superclass: superclass; inheritance: inheritance. 
+
+> 听君一席话，有如听君一席话 (Please check slides)
+
+17. The hierarchy diagram; False, it's a superclass. 
+
+![ch4e](images/ch4e.png)
+
+18. For more general purpose. E.g. deal with `cin` / `cout`, `stringstream`.
+19. Can handle error checking. E.g. whether there is a space.
+20. Google / Baidu.
+
+
+
