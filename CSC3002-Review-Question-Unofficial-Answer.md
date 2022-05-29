@@ -239,3 +239,105 @@
 
 
 
+## Ch5 Collections
+
+1. True. (If you have come to my tutorial, you gonna remember this question, type like `int` / `char` / `double` are defined in representation) 
+2. Simplicity, Flexibility, Security
+3. Standard template library
+4. `#include “vector.h”`
+5. Dynamic size; Support insert/delete operations; More flexible initialization
+6. Check whether the index is out of boundary
+7. Classes that include a base-type specification (`vector<int>`)
+
+![ch5a](images/ch5a.png)
+
+8. `vector<bool>`
+9. False. The default size is 0 but not 10
+10. `Vector<int> vec(20,0);`
+11. The member function: `.size()`
+12. 0 to N-1 (The first argument to `insertAt()` is an index number, and the new element is inserted before that position). 0 to N-1 (Remove the element at the index)
+13. The operator `[]`
+14. To avoid copying a new vector/object and consume great storage and time
+15. `Grid<char> chessboard(8,8)`, `vector<vector<char>> chessboard(8, vector<char>(8))`. 
+16. `chessboard[7][0] = ‘R’;`, `chessboard[7][7] = ‘R’;`.
+17. Last In First Out: Stack; First In First Out: Queue; 
+18. `push()` & `pop()`
+19. `enqueue()` & `dequeue()`
+20. Return the element at the top (the first one)
+21. We can only simulate discrete time instead of continuous time (0, 1, 2, … minutes)
+22. Key & Value.
+23. (For example, default value of `int` is 0)
+
+![ch5b](images/ch5b.png)
+
+24. The operator `[]`
+
+25. Lexicon class is space-efficient and convenient to iterate
+
+26. `.txt` and `.dat` files
+
+27. ```cpp
+    // C++
+    for (type var : collection) {}; 
+    // Stanford Lib
+    foreach (type var in collection);
+    ```
+
+28. Destroy the implicit data structure. Destroy their definition and access rules of *FIFO* and *LILO*, can only access element from one side. 
+
+29. (Stanford Lib) `Vector`: index order. `Map` & `Set`: no specific order, sometimes alphabetic order
+
+
+
+## Ch6 Class
+
+1. Find them in PPT
+2. public: Accessible and modifiable by instance object. private: Not accessible by external instance but in the internal class definition. The difference is whether it is available to the clients or not.
+3. False. Although this is the fundamental difference, but there are other differences like no inheritance for struct and the struct’s space is on stack and class on heap.
+4. The dot operator `.`
+5. `Class name()` (e.g. BigInt() )
+6. 1, which is the class object itself: *this (just like **self** in python), hidden **(?)**
+7. The function to access or set instance variables.
+8. Impossible to modify the values of any instance (member) variables.
+9. Use the double colon :: (e.g BigInt::) as the namespace
+10. Separated files for private part and use `#include` to include them. 
+11. `int operator% (int x, int y)`
+12. prefix (`++date`): first add/minus then return. Suffix (`date++`): first return then add/minus. add an `int` in the parameter list.
+
+```cpp
+Date operator++(Date & date);  // prefix
+Date operator++(Date & date, int);  // suffix
+```
+
+13. Stream type variable cannot copy by value. (If we do not return by reference, it’s return by value, the stream will be copied to another variable and return, but it’s forbidden)
+14. False. It depends.
+15. *Method based:* overload operators as a member function, has a default hidden argument: *this, it can access private member variables freely. *Free-function-based:* Easy to read and understand. But no access to private variables unless using “friend” symbol.
+
+```cpp
+// method based (in class definition)
+Date Date::operator+(int delta) { }
+// free function based (outside class definition)
+Date operator+(Date date, int delta) { }
+```
+
+16. The method or another class can access the private variables of this class.
+17. To iterate all directions. To define clockwise/counter-clockwise iteration.
+18. Check PPT. (Think – decide private variables – design constructor – design operations/free functions – code, test)
+19. A number that can be written as a fraction (a / b).
+20. `num` and `den` are relatively prime, `den > 0`
+21. No check on divide operator, but on constructor. 
+
+![ch6a](images/ch6a.png)
+
+![ch6b](images/ch6b.png)
+
+22. `<<` does not need to access private variable, it invokes public function `.toString()`
+23. A Logical unit in a string
+24. Iterate input, use `scanner.nextToken()` to get next token
+25. `TokenScanner scanner();`, `scanner.ignoreWhitespace();`
+26. Design method, set public variable/function, private variable/function reasonably.
+
+
+
+## Ch7 Recursion
+
