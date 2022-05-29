@@ -796,3 +796,134 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 ## Ch17 Sets
 
+1. T
+2. F
+3. Empty set, Integer set, Natural number set, Real number set
+4. Belong to / not
+5. $\{0,1,4,9,16,25,36,49,64,81,100\}$
+6. $\{x | x=9i, i\in N, 0 \le i \le 9\}$
+7. $\cup, \cap, -$
+8. $\{a, b, c, e\}$, $\{a, c\}$, $\{b\}$, $\{b\}$.
+9. A proper subset does not include the set itself
+10. $\{i | i\in N\}$, $\{i^2 | i\in N\}$
+11. /
+12. $(A\cap B) \cup(A\cap C) \cup(B\cap C)-(A\cap B\cap C)$. $(A\cap B\cup C-(A\cap C)\cup (B\cap C)) \cup  (A\cap B\cap C)$
+13. /
+14. /
+15. Map, each key element is unique and no repetition
+16.  ![ch17a](images/ch17a.png)
+
+17. No repeated element, the character must be in ASCII with length smaller than 128
+
+18. F T F F T F F F F T
+
+19. Number 0-9. `isnum(char)`
+
+20. YES
+
+21. (a). 0000000001001001
+
+    (b). 0100100011111111 
+
+    (c). 0100100010110110
+
+    (d). 0000000000000000
+
+    (e). 1011011110110110
+
+    (f). 0100100000000000  (only x[i] = 1 y[i] = 0 can have bit 1)
+
+    (g). 1011011100000000  (only x[i] = 0 y[i] = 0 can have bit 1)
+
+    (h). 0000000000001111
+
+    (i). 0100001001001000
+
+    (j). 0000000001001000
+
+22. Octal: 44111 (Check 3 bits together) Hexadecimal：00FF (Check 4 bits together)
+23. (a). `x & mask`; (b). `x |= mask` (c). `x &= ~mask` (d). `x ^= mask`.  
+24. `unsigned(1) << k`
+
+
+
+## Ch18 Graphs
+
+1. /
+
+2. T
+
+3. Whether an edge has direction
+
+4. Add two edges between two nodes
+
+5. /
+
+6. Neighbor: How many nodes are one edge around the node
+
+   Degree: How many edges are connected with the node
+
+7. Whether starting from a node can reach any other node
+
+8. T
+
+9. Vertex, Edge
+
+10. ```pseudocode
+    V= {CS1, CS2, CS3, CS4, CS5, CS6, CS7, CS8}
+    E= {CS1 -> CS2, CS2 -> CS3, CS2 -> CS4, CS2 -> CS5, CS3 -> CS7, CS3 -> CS8, CS4 -> CS6, CS5 -> CS6, CS5 -> CS7, CS5 -> CS8 }
+    ```
+
+11. ```pseudocode
+    CS1 -> (CS2)
+    CS2 -> (CS3, CS4, CS5)
+    CS3 -> (CS7, CS8)
+    CS4 -> (CS6)
+    CS5 -> (CS6, CS7, CS8)
+    CS6 -> ()
+    CS7 -> ()
+    CS8 -> ()
+    ```
+
+12. $$
+    \begin{bmatrix}
+     0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+     0 & 0 & 1 & 1 & 1 & 0 & 0 & 0\\
+     0 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+     0 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+     0 & 0 & 0 & 0 & 0 & 1 & 1 & 1\\
+     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+      0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+    \end{bmatrix}
+    $$
+
+13. Density (number of edges / number of nodes)
+
+14. Whether the graph is sparse (adjacency list) of dense (adjacency matrices)
+
+15. There are different traversal order
+
+16. To save space. Use a compact way to represent large data structure and easy to reference the neighboring nodes / arcs.
+
+17. DFS & BFS
+
+18. DFS: Atlanta -> Chicago -> Denver -> Dallas -> Los Angeles -> San Francisco -> Portland -> Seattle -> Boston -> New York
+
+    BFS: Atlanta -> Chicago -> Dallas -> New York -> Denver -> Los Angeles -> San Francisco -> Boston -> Portland -> Seattle
+
+![ch18a](images/ch18a.png)
+
+19.  ![ch18b](images/ch18b.png)
+
+Also Check 18.5 explanation
+
+![ch18c](images/ch18c.png)
+
+20. Node must include a name and set<ArcType *> arcs. ArcType must include a NodeType * start and a NodeType * finish.
+
+21. Choose the most beneficial behavior in the (every) current step but may not be globally the most beneficial.
+
+22. [Material Link](https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/) Learn more about it in CSC3100 or CSC4120
+23. Check textbook
+24. Check textbook
