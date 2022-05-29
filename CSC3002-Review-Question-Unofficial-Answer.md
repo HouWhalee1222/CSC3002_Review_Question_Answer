@@ -719,3 +719,80 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 ## Ch15 Maps
 
+1. Order the Key. Binary search each time
+2. Inserting an element in a vector costs $O(N)$ to move elements right
+3. Two-dimension
+4. The first character represents `NULL` (special), the program will ignore. 
+5. Bucket is the element of an array, representing one hashcode’s result. That array contains all the key-value pairs with a specific hash code.
+6. Different keys generate the same hash code and fall into the same bucket.
+7. The default copy constructor will help you copy the local vector (not in heap)
+
+![ch15a](images/ch15a.png)
+
+8. Given the index of the bucket and the key, find whether there is the key in the bucket.
+
+![ch15b](images/ch15b.png)
+
+9. The key has no relationship with the string str. You cannot access the key with the string next time.
+
+10. Yes. But all keys with go to one bucket (need to deal with collision) and complexity becomes O(N)
+
+11. AZ and DE
+
+    The first collision happens when two keys generate a same hash value and put into the same bucket. So we need to find which bucket obtains two elements the first. Following the alphabetic order (check from tail), AK --> AL --> AR --> AZ --> CA --> CO --> CT --> DE (collision with AZ!)
+
+    ![ch15c](images/ch15c.png)
+
+12. Raise bucket number (space), reduce the probability of collision and improve insert & find efficiency (time).
+13. Number of keys / number of buckets
+14. 0.7
+
+![ch15d](images/ch15d.png)
+
+15. Change the number of buckets and push the elements inside the hash table again (with new bucket index maybe)
+
+16. ![ch15e](images/ch15e.png)
+17. Use two-dimension look-up table
+
+
+
+## Ch16 Trees
+
+1. Every node requires a collection to store the child nodes. No loop/circle formed.
+
+2. Family tree, C++ class inheritance…
+
+3. /
+
+4. Root: Henry VII  height=5
+5. Node*, the pointer
+6. /
+7. At most two child nodes for each node. Left child node is smaller than right.
+8. Since the current node may be modified. (The root node changes)
+
+![ch16a](images/ch16a.png)
+
+9. /
+10. /
+11. /
+12. Inorder. Processing the current node between the two recursive calls represents an inorder traversal. No matter what order the nodes are inserted into the tree, in-order traversal will always generate the nodes in order (from small to large)
+13. The height difference between any node’s two child trees is no larger than 1
+14. (a) yes; (b) no (For left child of the root node: left height is 2 and right height is 0; For right child of the root node: left 0, right 2) (c) yes.
+15. F.  They can still work correctly but with complexity $O(N)$
+16. Difference between the left child tree and right child tree
+17. A=0 E=2 O=1 I=0 Y=1 U=0
+18. (Not covered in this course, learn more about it in the course CSC3100 or CSC4120)
+19. T
+20. /
+21. See the photo below: 
+
+![ch16b](images/ch16b.png)
+
+22. Use the rightmost node in left child tree or leftmost node in right child tree to replace the removed node
+23. 1521-2193-1604-3169-2708-1861. (insert 1521 as the last element and move up twice)
+24. The representation is different, a heap is an array structure used to simulate the partially ordered trees (tree structure). But the mechanism is the same.
+
+
+
+## Ch17 Sets
+
