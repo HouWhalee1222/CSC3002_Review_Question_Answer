@@ -341,3 +341,66 @@ Date operator+(Date date, int delta) { }
 
 ## Ch7 Recursion
 
+1. Invoke the function itself, iterate a certain collection/range. Yes. 
+2. The function makes use of the same structure of the problem to solve larger problem with smaller parameters and the same interface, invoke itself.
+3. $n$ may be smaller than 100. All $n \le 100$ should belong to the basic case.
+
+![ch7a](images/ch7a.png)
+
+4. from the textbook: 
+
+![ch7b](images/ch7b.png)
+
+5. from the textbook: 
+
+![ch7c](images/ch7c.png)
+
+6. Divide the problem into a smaller problem and conquer
+7. Assuming that any simpler recursive call will work correctly—is called the recursive leap of faith. Whenever you try to understand a recursive program, it is useful to put the underlying details aside and focus instead on a single level of the operation.
+8. $fib(3) = fib(2) + fib(1) = 1 + 1 = 2$; Sketch out by yourself
+9. Each element of a sequence is defined in terms of earlier elements. $t_n = t_{n-1} + t_{n-2}$
+10. $R_n = R_{n-1} + R_{n-2} – R_{n-4}$
+11. 
+
+![ch7d](images/ch7d.png)
+
+12. A wrapper function invoke 
+
+```cpp
+int fib(int n){
+	return additiveSequence(n, 0, 1);
+}
+```
+
+![ch7e](images/ch7e.png)
+
+13. Yes. Calculate one more term.
+14. They are the base cases. No. When len = 1, the invoke term len-2 could be -1.
+15. Check whether the middle term is palindrome after checking the characters on two sides.
+16. You call me, I call you.
+17. Mutual recursion will happen and never ends. No reduce, No simple case.
+18. `isEven(1) = isOdd(0) = isEven(-1) = ….` Basic case is not complete.
+
+
+
+## Ch8 Recursive Strategies
+
+1. `tower(n,A,B,C) = tower(n-1,A,C,B) + 1(A->C) + tower(n-1,B,A,C)` (Move n disks from A to C = Move the up n-1 disks from A to B + Move the lowest disk from A to C + Move the n-1 disks from B to C)
+2. The b step will fail since larger disk cannot place upon smaller disk, the temporary spire is unavailable.
+3. A->C  A->C
+4. Permutation, 排列
+5. The first insight is to pick any character as the first one in the permutation, and perform full permutations on the remaining. The second is to pick the first character out, perform full permutations on the remaining and insert the character to the n positions in the results. Both generate: $F(n) = n*F(n-1) \to O(N!)$$
+6. $4! = 24$
+7. Set the minimum area, if width * height is smaller than the minimum area, terminate!
+8. like: 
+
+![ch8a](images/ch8a.png)
+
+9. One-order segment has 12 lines, two-order segments has 12 * 4 = 48 lines.
+
+![ch8b](images/ch8b.png)
+
+
+
+## Ch9 Backtracking Algorithms
+
