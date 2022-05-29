@@ -484,3 +484,176 @@ int fib(int n){
 
 ## Ch11 Pointers and Arrays
 
+1. Bit: The smallest memory unit, a single binary bit {0, 1}
+
+Byte: The smallest transferable/addressable unit
+
+Word：The biggest bytes a CPU can process each time. Depend on the system, might be 4bytes or 8 bytes
+
+2. Binary digit
+
+3. $2*1024*1024*1024$ bytes. 
+4. (a)0x11; (b)0x100; (c) 0x6C1; (d) 0xACE.
+5. (a) 23; (b) 100; (c) 204; (d) 4013.
+6. `char`: 1;  `double`: 8.
+7. T
+8. T
+9. 1111111111111111111111111111001  (take inverse at every bit and then plus 1)
+10. Stack frame + Heap + Static Data Region
+11. Get actual number of bytes required to store a value of type t / variable x. `sizeof()` [docs](https://en.cppreference.com/w/cpp/language/sizeof)
+
+![ch11a](images/ch11a.png)
+
+12. /
+
+13. Left value, can place at the left hand side in the value assignment. A left value can store data and corresponds to an address in memory
+
+14. A compact way to refer to large data structure; Convenient to dynamically allocate memory. Record the relationships of data items (linked list)
+
+15. `p1`：Integer Pointer.  `p2`：Integer.
+
+16. `*`: dereferencing. `&`: referencing, obtain address
+
+17. Pointer assignment: Assign an address of an item to the pointer, the pointer will store the address of that item and point to the new item now.
+
+    Value assignment: Assign the value to an item, its address in the memory is still the same.
+
+18. Skipped. Just remember that in stack frame the address grows from high value to low value
+
+19. T
+
+20. F (`*` dereferencing is not always meaningful, when `p` is an `int`, it fails)
+
+21. Pass the pointer as the argument
+
+22. ```cpp
+    float realArray[100]; 
+    bool inUse[16]; 
+    string lines[1000];
+    ```
+
+23. ```cpp
+    int squares[11]; 
+    for (int i=0; i<11; i++) 
+    	squares[i] = i * i;
+    ```
+
+24. Allocated size: the allocated size of the array during declaration. Effective size: How many elements in the array are actively in use (initialized)
+
+25. Calculate j+3 --> Find the address of intArray (address of the first element) --> Indexing, Add this address by 4* (j + 3) (bytes, 4 since an integer occupies 4 bytes) --> Access the value intArray[j+3] --> Referencing, return the address of the value
+
+26. `array[2]` is the third element of the array, it will return the value. `array + 2` will return the address of array’s address + 2 \* size of an element. `&array + 2` will return array's address + 2 \* size of the array
+
+![ch11b](images/ch11b.png)
+
+![ch11c](images/ch11c.png)
+
+27. FF28 (FF00 + 5 * 0x8 = FF00 + 0x28 = FF28, pay attention it is hexadecimal here)
+28. F. It will add the size of the type p is pointing to (int à 4 bytes)
+
+![ch11d](images/ch11d.png)
+
+![ch11e](images/ch11e.png)
+
+29. 1. Dereference p, return *p at first, and then increment p by the size of the type it points to.
+
+    ![ch11f](images/ch11f.png)
+
+    ![ch11g](images/ch11g.png)
+
+    2. If it’s *++p, then p will increment first and then deference, return (cause an undefined behavior)
+
+    ![ch11h](images/ch11h.png)
+
+    ![ch11i](images/ch11i.png)
+
+30. `++` is applied first. From right to left.
+
+
+
+## Ch12 Dynamic Memory Management
+
+1. See the photo below: 
+
+![ch12a](images/ch12a.png)
+
+2. The pool of unallocated memory available to a program is called the heap. For dynamic allocation (new)
+
+3. Maximize available space
+
+4. ```cpp
+   bool* bp;
+   Point* pp(3,4);  
+   string* name = new string[100];
+   ```
+
+5. only for the last one: delete[] name;
+
+6. cell: the basic element unit in the list, contains the data field and the link. link: represent the relationship between the cells
+
+7. Use `NULL`  Make the last element point to `NULL`.
+
+8. ```cpp
+   struct Cell{
+   	int value;
+   	Cell* link
+   }
+   ```
+
+9. ```cpp
+   Cell* head = new Cell;
+   for (Cell* cur = head; cur! = NULL; cur = cur->link){
+   
+   }
+   ```
+
+10. Program fails to free the heap memory allocated.
+
+11. F  (No garbage collection in C++ but in Java)
+
+12. Release the memory occupied by the class. Avoid memory leak.
+
+13. `~IntArray();`
+
+14.   ![ch12b](images/ch12b.png)
+
+15. T (Destructor will automatically be invoked when a local variable / temporary value go out of scope)
+
+![ch12c](images/ch12c.png)
+
+16. Initialize a larger array with bigger size when expanding, and copy elements in the original array to the new. 
+
+17. Initial capacity; char* array store data; capacity; count – current element number
+
+18. Allocate a new array, copy original array to the new, delete original array
+
+19. No, If the current size reaches capacity, every push method will require O(N) to copy and expand the array, causing the average complexity O(N);
+
+20. Reclaimed: 回收. Whenever your program creates local variables in a function. When the function returns or the block ends (e.g. for {…}), go out of scope. 
+
+21. Whenever the program uses new. When the program uses delete. 
+
+22. To track what the program is doing and the address – value relationship.
+
+23. Add &，write the original variable address in the square, add an arrow
+
+24. *this (The object / class itself, just like **self** in python)
+
+25. To test a small part of the code. The test program that checks the correctness of that module in isolation from the rest of the code.
+
+26. Shallow copy: Dynamic variables are copied as address not the data, the two items share one heap memory, 
+
+    Deep copy: Dynamic variables are copied as data, Copy the heap memory at the same time
+
+    C++ uses **shallow copy** by default
+
+27. Override the **=** operator and the copy constructor
+28. The referenced variables/objects cannot be changed. (Will not change the value of that parameter)
+29. The data fields of the class will not be changed. Classes that use the const specification for all appropriate parameters and methods.
+30. You can use the Proportional Sequence Summation Formula. $\lim_{k \to +\infin} 1 * (1 – 0.5^k) / (1 – 0.5) = 2$. Or you can use mathematical induction to explain the sum is (1-1/2^k)
+
+
+
+## Ch13 Efficiency and Representation
+
+1. 
