@@ -121,7 +121,7 @@
 2. False (If there is a space, it will only read the part before the space)
 3. Both `istream` and `string`.
 
-![ch3a](images/ch3a.png)
+<img src="images/ch3a.png" alt="ch3a" style="zoom: 67%;" />
 
 4. Method: string.size(). Use a dot after the variable. Function: getline(cin, string); Use a parentheses 
 
@@ -195,15 +195,15 @@
 
    Default: Round the float number and output.
 
-![ch4a](images/ch4a.png)
+<img src="images/ch4a.png" alt="ch4a" style="zoom: 50%;" />
 
-![ch4b](images/ch4b.png)
+<img src="images/ch4b.png" alt="ch4b" style="zoom:50%;" />
 
 7. Please view the code and [materials](http://c.biancheng.net/view/275.html): 
 
-![ch4c](images/ch4c.png)
+<img src="images/ch4c.png" alt="ch4c" style="zoom: 33%;" />
 
-![ch4d](images/ch4d.png)
+<img src="images/ch4d.png" alt="ch4d" style="zoom: 50%;" />
 
 8. For file I/O operations: read file, write file. 
 
@@ -231,7 +231,7 @@
 
 17. The hierarchy diagram; False, it's a superclass. 
 
-![ch4e](images/ch4e.png)
+<img src="images/ch4e.png" alt="ch4e" style="zoom:50%;" />
 
 18. For more general purpose. E.g. deal with `cin` / `cout`, `stringstream`.
 19. Can handle error checking. E.g. whether there is a space.
@@ -249,7 +249,7 @@
 6. Check whether the index is out of boundary
 7. Classes that include a base-type specification (`vector<int>`)
 
-![ch5a](images/ch5a.png)
+<img src="images/ch5a.png" alt="ch5a" style="zoom: 67%;" />
 
 8. `vector<bool>`
 9. False. The default size is 0 but not 10
@@ -268,7 +268,7 @@
 22. Key & Value.
 23. (For example, default value of `int` is 0)
 
-![ch5b](images/ch5b.png)
+<img src="images/ch5b.png" alt="ch5b" style="zoom: 67%;" />
 
 24. The operator `[]`
 
@@ -327,9 +327,9 @@ Date operator+(Date date, int delta) { }
 20. `num` and `den` are relatively prime, `den > 0`
 21. No check on divide operator, but on constructor. 
 
-![ch6a](images/ch6a.png)
+<img src="images/ch6a.png" alt="ch6a" style="zoom: 50%;" />
 
-![ch6b](images/ch6b.png)
+<img src="images/ch6b.png" alt="ch6b" style="zoom:67%;" />
 
 22. `<<` does not need to access private variable, it invokes public function `.toString()`
 23. A Logical unit in a string
@@ -345,15 +345,15 @@ Date operator+(Date date, int delta) { }
 2. The function makes use of the same structure of the problem to solve larger problem with smaller parameters and the same interface, invoke itself.
 3. $n$ may be smaller than 100. All $n \le 100$ should belong to the basic case.
 
-![ch7a](images/ch7a.png)
+<img src="images/ch7a.png" alt="ch7a" style="zoom:67%;" />
 
 4. from the textbook: 
 
-![ch7b](images/ch7b.png)
+<img src="images/ch7b.png" alt="ch7b" style="zoom: 67%;" />
 
 5. from the textbook: 
 
-![ch7c](images/ch7c.png)
+<img src="images/ch7c.png" alt="ch7c" style="zoom:50%;" />
 
 6. Divide the problem into a smaller problem and conquer
 7. Assuming that any simpler recursive call will work correctly—is called the recursive leap of faith. Whenever you try to understand a recursive program, it is useful to put the underlying details aside and focus instead on a single level of the operation.
@@ -362,7 +362,7 @@ Date operator+(Date date, int delta) { }
 10. $R_n = R_{n-1} + R_{n-2} – R_{n-4}$
 11. 
 
-![ch7d](images/ch7d.png)
+<img src="images/ch7d.png" alt="ch7d" style="zoom:50%;" />
 
 12. A wrapper function invoke 
 
@@ -394,11 +394,11 @@ int fib(int n){
 7. Set the minimum area, if width * height is smaller than the minimum area, terminate!
 8. like: 
 
-![ch8a](images/ch8a.png)
+<img src="images/ch8a.png" alt="ch8a" style="zoom:50%;" />
 
 9. One-order segment has 12 lines, two-order segments has 12 * 4 = 48 lines.
 
-![ch8b](images/ch8b.png)
+<img src="images/ch8b.png" alt="ch8b" style="zoom:50%;" />
 
 
 
@@ -407,7 +407,7 @@ int fib(int n){
 1. Iterative
 2. Put your right hand on the wall and follow. Yes.
 
-![ch9a](images/ch9a.png)
+<img src="images/ch9a.png" alt="ch9a" style="zoom:50%;" />
 
 ![ch9b](images/ch9b.png)
 
@@ -421,13 +421,13 @@ int fib(int n){
 
 ![ch9c](images/ch9c.png)
 
-![ch9d](images/ch9d.png)
+<img src="images/ch9d.png" alt="ch9d" style="zoom:50%;" />
 
 10. If nCoins is (4n + 1) then it’s bad, otherwise it’s good. (Can pick 1/2/3 each time)
 11. Minimize the maximum of your opponents’ rating. Consider your opponents, game theory
 12. To apply in a more general sense. Have a grasp of the ideology.
 13. Pass the information of individual step during the backtracking. Judge whether reaching the end and terminate.
-14.   ![ch9e](images/ch9e.png)
+14.   <img src="images/ch9e.png" alt="ch9e" style="zoom: 80%;" />
 
 15. To maximize your minimum score. The second position. -3.
 
@@ -444,7 +444,7 @@ int fib(int n){
 2. Make the item in order
 3. The first `lh` numbers is already in order, iterating them brings extra cost.
 
-![ch10a](images/ch10a.png)
+<img src="images/ch10a.png" alt="ch10a" style="zoom:50%;" />
 
 4. Selection sort is $O(N²)$, $50 * (1000/250)² = 800 ms$
 5. $(N + 1) * N / 2$
@@ -453,14 +453,14 @@ int fib(int n){
 8. /
 9. Yes. It is just the same as $O(N^2)$
 
-![ch10b](images/ch10b.png)
+<img src="images/ch10b.png" alt="ch10b" style="zoom: 80%;" />
 
 10. Yes. Selection sort $f(n) = O(N^2) <= O(N^3)$ Only if it’s “smaller or equal than”.
 11. No. $O(N\log N) < O(N^2)$
 12. $O(N^2)$
 13. $O(1)$  (constant)
 14. /
-15.   ![ch10c](images/ch10c.png)
+15.   <img src="images/ch10c.png" alt="ch10c" style="zoom: 67%;" />
 
 16. Merge compare the two arrays one by one and pick the smaller one out each time. All the numbers are iterated exactly once.
 
@@ -472,9 +472,9 @@ int fib(int n){
 
 20. Whether the complexity is exponential.
 
-21. ![ch10d](images/ch10d.png)
+21. <img src="images/ch10d.png" alt="ch10d" style="zoom:50%;" />
 
-    ![ch10e](images/ch10e.png)
+    <img src="images/ch10e.png" alt="ch10e" style="zoom: 67%;" />
 
 22. $O(N^2)$ (consider a completely ordered reversed array, each time you iterate the whole array but can only identify one position but not make a good partition) $O(N\log N)$
 23. Base case $\to$ Iterative step
@@ -502,7 +502,7 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 10. Stack frame + Heap + Static Data Region
 11. Get actual number of bytes required to store a value of type t / variable x. `sizeof()` [docs](https://en.cppreference.com/w/cpp/language/sizeof)
 
-![ch11a](images/ch11a.png)
+<img src="images/ch11a.png" alt="ch11a" style="zoom:50%;" />
 
 12. /
 
@@ -544,28 +544,28 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 26. `array[2]` is the third element of the array, it will return the value. `array + 2` will return the address of array’s address + 2 \* size of an element. `&array + 2` will return array's address + 2 \* size of the array
 
-![ch11b](images/ch11b.png)
+<img src="images/ch11b.png" alt="ch11b" style="zoom:50%;" />
 
-![ch11c](images/ch11c.png)
+<img src="images/ch11c.png" alt="ch11c" style="zoom:50%;" />
 
 27. FF28 (FF00 + 5 * 0x8 = FF00 + 0x28 = FF28, pay attention it is hexadecimal here)
 28. F. It will add the size of the type p is pointing to (int à 4 bytes)
 
-![ch11d](images/ch11d.png)
+<img src="images/ch11d.png" alt="ch11d" style="zoom:50%;" />
 
-![ch11e](images/ch11e.png)
+<img src="images/ch11e.png" alt="ch11e" style="zoom:67%;" />
 
 29. 1. Dereference p, return *p at first, and then increment p by the size of the type it points to.
 
-    ![ch11f](images/ch11f.png)
+    <img src="images/ch11f.png" alt="ch11f" style="zoom:50%;" />
 
-    ![ch11g](images/ch11g.png)
+    <img src="images/ch11g.png" alt="ch11g" style="zoom:67%;" />
 
     2. If it’s *++p, then p will increment first and then deference, return (cause an undefined behavior)
 
-    ![ch11h](images/ch11h.png)
+    <img src="images/ch11h.png" alt="ch11h" style="zoom:50%;" />
 
-    ![ch11i](images/ch11i.png)
+    <img src="images/ch11i.png" alt="ch11i" style="zoom:67%;" />
 
 30. `++` is applied first. From right to left.
 
@@ -575,7 +575,7 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 1. See the photo below: 
 
-![ch12a](images/ch12a.png)
+<img src="images/ch12a.png" alt="ch12a" style="zoom:50%;" />
 
 2. The pool of unallocated memory available to a program is called the heap. For dynamic allocation (new)
 
@@ -613,11 +613,11 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 13. `~IntArray();`
 
-14.   ![ch12b](images/ch12b.png)
+14.   <img src="images/ch12b.png" alt="ch12b" style="zoom:50%;" />
 
 15. T (Destructor will automatically be invoked when a local variable / temporary value go out of scope)
 
-![ch12c](images/ch12c.png)
+<img src="images/ch12c.png" alt="ch12c" style="zoom:67%;" />
 
 16. Initialize a larger array with bigger size when expanding, and copy elements in the original array to the new. 
 
@@ -658,7 +658,7 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 2. What you see is what you get
 3. Use command line to edit texts
 4. I: `.insertCharacter(ch)`; J: `.moveCursorToStart()`; E: `.moveCursorToEnd()`; F: `.moveCursorForward()`; B: `.moveCursorBackward()`; D. `.deleteCharacter()`.
-5. ![ch13a](images/ch13a.png)
+5. <img src="images/ch13a.png" alt="ch13a" style="zoom:50%;" />
 
 6. I and D: move the elements of the inserted/deleted element afterwards by one step, causing many element movements.
 7. Before (peek à end)：DCBA  after：EFGHIJ. Imagine splitting it in the middle. 
@@ -668,7 +668,7 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 11. At the beginning. When there is no element, the cursor is at the beginning
 12. Create a new cell --> Assign value to the new cell --> Let the new cell link to the next cell of the cursor --> Let the cursor’s cell link to the new cell --> Let the cursor point to the new cell
 
-![ch13b](images/ch13b.png)
+<img src="images/ch13b.png" alt="ch13b" style="zoom: 67%;" />
 
 13. Start（dummy）—H—E—L—L—O The cursor points to the first L
 
@@ -703,7 +703,7 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 5. A ring structure buffer. Use head and tail to mark the beginning and the end. Applied in Array-based queue
 
-![ch14a](images/ch14a.png)
+<img src="images/ch14a.png" alt="ch14a" style="zoom: 67%;" />
 
 6. Whether `head==tail`. Compare the current size `(tail – head + capacity) % capacity` with `capacity`. 
 7. /
@@ -713,7 +713,7 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 11. Whether the head or tail pointer is `NULL`; see the `count` variable. 
 12. `Typename & Classname::operator[](Typename);`
 
-![ch14b](images/ch14b.png)
+<img src="images/ch14b.png" alt="ch14b" style="zoom:67%;" />
 
 
 
@@ -727,11 +727,11 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 6. Different keys generate the same hash code and fall into the same bucket.
 7. The default copy constructor will help you copy the local vector (not in heap)
 
-![ch15a](images/ch15a.png)
+<img src="images/ch15a.png" alt="ch15a" style="zoom:50%;" />
 
 8. Given the index of the bucket and the key, find whether there is the key in the bucket.
 
-![ch15b](images/ch15b.png)
+<img src="images/ch15b.png" alt="ch15b" style="zoom:50%;" />
 
 9. The key has no relationship with the string str. You cannot access the key with the string next time.
 
@@ -741,17 +741,17 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
     The first collision happens when two keys generate a same hash value and put into the same bucket. So we need to find which bucket obtains two elements the first. Following the alphabetic order (check from tail), AK --> AL --> AR --> AZ --> CA --> CO --> CT --> DE (collision with AZ!)
 
-    ![ch15c](images/ch15c.png)
+    <img src="images/ch15c.png" alt="ch15c" style="zoom:67%;" />
 
 12. Raise bucket number (space), reduce the probability of collision and improve insert & find efficiency (time).
 13. Number of keys / number of buckets
 14. 0.7
 
-![ch15d](images/ch15d.png)
+<img src="images/ch15d.png" alt="ch15d" style="zoom:67%;" />
 
 15. Change the number of buckets and push the elements inside the hash table again (with new bucket index maybe)
 
-16. ![ch15e](images/ch15e.png)
+16. <img src="images/ch15e.png" alt="ch15e" style="zoom:67%;" />
 17. Use two-dimension look-up table
 
 
@@ -770,7 +770,7 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 7. At most two child nodes for each node. Left child node is smaller than right.
 8. Since the current node may be modified. (The root node changes)
 
-![ch16a](images/ch16a.png)
+<img src="images/ch16a.png" alt="ch16a" style="zoom:67%;" />
 
 9. /
 10. /
@@ -786,7 +786,7 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 20. /
 21. See the photo below: 
 
-![ch16b](images/ch16b.png)
+<img src="images/ch16b.png" alt="ch16b" style="zoom:67%;" />
 
 22. Use the rightmost node in left child tree or leftmost node in right child tree to replace the removed node
 23. 1521-2193-1604-3169-2708-1861. (insert 1521 as the last element and move up twice)
@@ -811,7 +811,7 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 13. /
 14. /
 15. Map, each key element is unique and no repetition
-16.  ![ch17a](images/ch17a.png)
+16.  <img src="images/ch17a.png" alt="ch17a" style="zoom:67%;" />
 
 17. No repeated element, the character must be in ASCII with length smaller than 128
 
@@ -912,13 +912,15 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
     BFS: Atlanta -> Chicago -> Dallas -> New York -> Denver -> Los Angeles -> San Francisco -> Boston -> Portland -> Seattle
 
-![ch18a](images/ch18a.png)
+<img src="images/ch18a.png" alt="ch18a" style="zoom:50%;" />
 
-19.  ![ch18b](images/ch18b.png)
+19. Refer to the textbook:
+
+<img src="images/ch18b.png" alt="ch18b" style="zoom: 67%;" />
 
 Also Check 18.5 explanation
 
-![ch18c](images/ch18c.png)
+<img src="images/ch18c.png" alt="ch18c" style="zoom: 67%;" />
 
 20. Node must include a name and set<ArcType *> arcs. ArcType must include a NodeType * start and a NodeType * finish.
 
@@ -927,3 +929,120 @@ Also Check 18.5 explanation
 22. [Material Link](https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/) Learn more about it in CSC3100 or CSC4120
 23. Check textbook
 24. Check textbook
+
+
+
+## Ch19 Inheritance
+
+1. `class SubClass: public SuperClass{ };`
+2. T (It can be non-template and no specification)
+3. F (The parameter lists may be different)
+4. Allow sub-class to override super-class method. Dynamic banding. When invoking methods, choose the pointer’s pointing type instead of pointer’s initialization type.
+5. A pure virtual method will never be executed in the super-class but in sub-class. To guarantee security. No need to write **virtual** in the sub-class.
+6. Add `=0` at the end. E.g., `virtual double getPay() = 0;`. 
+7. An abstract class cannot be instantiated (but can define its pointer) and can only serve as the parent class of other classes. Yes, can provide implementation or leave the method empty.
+8. Assign value of sub-class to super-class. Slicing will throw off all fields in sub-class but not in the super-class.
+9. Pointers. There may be slicing if storing values.
+10. draw(gw)
+11. Protected section is visible/available to sub-class but not to clients. Public section is visible to all. Private section is only visible to the class itself.
+12. A different version of the superclass constructor. Use sub-class’s constructor to initialize super-class. Appear in sub-class’s constructor
+
+<img src="images/ch19a.png" alt="ch19a" style="zoom:67%;" />
+
+<img src="images/ch19b.png" alt="ch19b" style="zoom:50%;" />
+
+13. Interpreter: Execute the code line by line directly (Python). 
+
+    Compiler: transform source code to machine code (binary form) and generate an exe file to execute (C++). Not suitable for cross-platform but has a much higher efficiency than Interpreter.
+
+14. <img src="images/ch19c.png" alt="ch19c" style="zoom:67%;" />
+
+15. (No need to know in this course)
+
+<img src="images/ch19d.png" alt="ch19d" style="zoom:67%;" />
+
+16. An error. 
+17.  
+
+<img src="images/ch19e.png" alt="ch19e" style="zoom:67%;" />
+
+18. /
+19. /
+20. /
+21. /
+22. /
+23. /
+24. /
+25. /
+26. /
+27. /
+28. /
+29. /
+30. /
+31. /
+32. /
+33. /
+34. Classes can inherit behavior from more than one superclass
+
+<img src="images/ch19f.png" alt="ch19f" style="zoom:50%;" />
+
+35. F
+
+<img src="images/ch19g.png" alt="ch19g" style="zoom:67%;" />
+
+
+
+## Ch20 Strategies for Iteration
+
+1. ```cpp
+   for (Set<int>::iterator it=primes.begin(); it!=primes.end(); it++)
+   {cout << *it << endl;}
+   ```
+
+2. Return `*it` first and then `it++`; Return the value that iterator points to. Then increment the iterator by 1, now it points to the next element of the collection.
+
+3. T
+
+4. F
+
+5. The `ForwardIterator` class combines these capabilities and supports both reading and writing.
+
+6. F
+
+7. Every function is stored in memory and therefore has an address.
+
+8. The first one is a function that receives a string and returns a `char*`
+
+   The second one is a pointer to the function, where the function receives a string and returns a char. 
+
+9. `bool (*fn) (int, int);`
+10.  The function serves as the parameter of other functions<img src="images/ch20b.png" alt="ch20b" style="zoom:67%;" />
+
+11.  <img src="images/ch20c.png" alt="ch20c" style="zoom:67%;" />
+
+12. Function object: any object that overloads the function-call operator. Function pointers: a pointer pointing to a function. 
+13. `operator()`
+
+<img src="images/ch20d.png" alt="ch20d" style="zoom:67%;" />
+
+14. `sort(v.begin(), v.end());` arguments are two iterators. 
+15.  <img src="images/ch20e.png" alt="ch20e" style="zoom:50%;" />
+
+16. F
+
+<img src="images/ch20f.png" alt="ch20f" style="zoom: 67%;" />
+
+17. 
+
+<img src="images/ch20g.png" alt="ch20g" style="zoom:67%;" />
+
+18. `count_if(v.begin(), v.end(), bind2nd(less<int>(), 0))`
+19. <img src="images/ch20i.png" alt="ch20i" style="zoom:80%;" />
+
+20. Define proc as a type “pointer to a function taking no argument and return no result”
+
+<img src="images/ch20j.png" alt="ch20j" style="zoom:67%;" />
+
+21.  <img src="images/ch21k.png" alt="ch21k" style="zoom: 80%;" />
+
+22. F. Iterator acts as pointers. 
