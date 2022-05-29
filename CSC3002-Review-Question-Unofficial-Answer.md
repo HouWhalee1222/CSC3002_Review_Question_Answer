@@ -602,9 +602,7 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 9. ```cpp
    Cell* head = new Cell;
-   for (Cell* cur = head; cur! = NULL; cur = cur->link){
-   
-   }
+   for (Cell* cur = head; cur! = NULL; cur = cur->link){ }
    ```
 
 10. Program fails to free the heap memory allocated.
@@ -656,4 +654,68 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 ## Ch13 Efficiency and Representation
 
-1. 
+1. F  (Time + Space)
+2. What you see is what you get
+3. Use command line to edit texts
+4. I: `.insertCharacter(ch)`; J: `.moveCursorToStart()`; E: `.moveCursorToEnd()`; F: `.moveCursorForward()`; B: `.moveCursorBackward()`; D. `.deleteCharacter()`.
+5. ![ch13a](images/ch13a.png)
+
+6. I and D: move the elements of the inserted/deleted element afterwards by one step, causing many element movements.
+7. Before (peek à end)：DCBA  after：EFGHIJ. Imagine splitting it in the middle. 
+8. Between the top elements of two (before & after) stacks. 
+9. J and E
+10. Add a possible position for the cursor. If there are $n$ cells, there will be $n+1$ possible positions for the cursor. (Point to Cell A then the cursor will be after Cell A
+11. At the beginning. When there is no element, the cursor is at the beginning
+12. Create a new cell --> Assign value to the new cell --> Let the new cell link to the next cell of the cursor --> Let the cursor’s cell link to the new cell --> Let the cursor point to the new cell
+
+![ch13b](images/ch13b.png)
+
+13. Start（dummy）—H—E—L—L—O The cursor points to the first L
+
+14. Start（dummy）—H—E—L—X—L—O  The cursor points to X
+
+15. Go through the linked list
+
+16. ```cpp
+    Cell* head = new Cell;
+    for (Cell* cur = head; cur! = NULL; cur = cur->link){ }
+    ```
+
+17. J and E. The linked list cannot access the previous cell and the last cell directly, must traverse the list.
+
+18. Time-space tradeoff is the tradeoff between time and space
+
+19. Double linked list, add a link to the previous cell
+
+20. Time-space tradeoff, more space consumption. (Buy a new computer maybe)
+
+
+
+## Ch14 Linear Structures
+
+1. More generality, can accommodate different types. No overloading one by one
+
+2. template `<typename placeholder>`
+
+3. /
+
+4. An integer array. An integer (store the size). Two integers representing the indices of head and tail.
+
+5. A ring structure buffer. Use head and tail to mark the beginning and the end. Applied in Array-based queue
+
+![ch14a](images/ch14a.png)
+
+6. Whether `head==tail`. Compare the current size `(tail – head + capacity) % capacity` with `capacity`. 
+7. /
+8. The technique of using remainders to reduce the result of a computation to a small, cyclical range of integers is an important mathematical technique called modular arithmetic. Let index inside the range 0 ~ capacity - 1
+9. Tail may be smaller than head and generate a negative number (like the above image) Should be (tail – head + capacity) % capacity
+10. /
+11. Whether the head or tail pointer is `NULL`; see the `count` variable. 
+12. `Typename & Classname::operator[](Typename);`
+
+![ch14b](images/ch14b.png)
+
+
+
+## Ch15 Maps
+
