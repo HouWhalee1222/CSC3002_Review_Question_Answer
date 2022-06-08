@@ -13,7 +13,7 @@
 7. `int i = 0;` means `int(type) i(name) = 0(value); `. Scope is $-2^{31} \sim 2^{31}-1$. 
 8. a, b, c, f, h, k, l
 
-<img src="images/ch1a.png" style="zoom: 67%;" />
+<img src="images/ch1a.png" style="zoom: 50%;" />
 
 9. domain of values & operations
 10. domain of values & operations
@@ -121,7 +121,7 @@
 2. False (If there is a space, it will only read the part before the space)
 3. Both `istream` and `string`.
 
-<img src="images/ch3a.png" alt="ch3a" style="zoom: 67%;" />
+<img src="images/ch3a.png" alt="ch3a" style="zoom: 50%;" />
 
 4. Method: string.size(). Use a dot after the variable. Function: getline(cin, string); Use a parentheses 
 
@@ -360,7 +360,7 @@ Date operator+(Date date, int delta) { }
 8. $fib(3) = fib(2) + fib(1) = 1 + 1 = 2$; Sketch out by yourself
 9. Each element of a sequence is defined in terms of earlier elements. $t_n = t_{n-1} + t_{n-2}$
 10. $R_n = R_{n-1} + R_{n-2} – R_{n-4}$
-11. 
+11. From the textbook:
 
 <img src="images/ch7d.png" alt="ch7d" style="zoom:50%;" />
 
@@ -433,7 +433,7 @@ int fib(int n){
 
 
 
-**In the following chapters, some questions are not covered in the lecture, so they will be skipped.**
+**In the following chapters, some questions are not covered in the lecture, so they will be skipped and be denoted with `/`.**
 
 
 
@@ -460,21 +460,21 @@ int fib(int n){
 12. $O(N^2)$
 13. $O(1)$  (constant)
 14. /
-15.   <img src="images/ch10c.png" alt="ch10c" style="zoom: 67%;" />
+15. from the textbook:
+
+
+<img src="images/ch10c.png" alt="ch10c" style="zoom: 67%;" />
 
 16. Merge compare the two arrays one by one and pick the smaller one out each time. All the numbers are iterated exactly once.
-
 17. It doesn’t matter. The two lines just put the remaining numbers (the largest ones) at the end of the ordered array. Only one array has remains so pick any of the two is ok.
-
 18. /
-
 19. Can be expressed as a power of N.
-
 20. Whether the complexity is exponential.
+21. From the textbook: 
 
-21. <img src="images/ch10d.png" alt="ch10d" style="zoom:50%;" />
+<img src="images/ch10d.png" alt="ch10d" style="zoom:50%;" />
 
-    <img src="images/ch10e.png" alt="ch10e" style="zoom: 67%;" />
+<img src="images/ch10e.png" alt="ch10e" style="zoom: 67%;" />
 
 22. $O(N^2)$ (consider a completely ordered reversed array, each time you iterate the whole array but can only identify one position but not make a good partition) $O(N\log N)$
 23. Base case $\to$ Iterative step
@@ -613,7 +613,9 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 13. `~IntArray();`
 
-14.   <img src="images/ch12b.png" alt="ch12b" style="zoom:50%;" />
+14. from the textbook:
+
+    <img src="images/ch12b.png" alt="ch12b" style="zoom:50%;" />
 
 15. T (Destructor will automatically be invoked when a local variable / temporary value go out of scope)
 
@@ -658,7 +660,9 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 2. What you see is what you get
 3. Use command line to edit texts
 4. I: `.insertCharacter(ch)`; J: `.moveCursorToStart()`; E: `.moveCursorToEnd()`; F: `.moveCursorForward()`; B: `.moveCursorBackward()`; D. `.deleteCharacter()`.
-5. <img src="images/ch13a.png" alt="ch13a" style="zoom:50%;" />
+5. From the slides:
+
+   <img src="images/ch13a.png" alt="ch13a" style="zoom:50%;" />
 
 6. I and D: move the elements of the inserted/deleted element afterwards by one step, causing many element movements.
 7. Before (peek à end)：DCBA  after：EFGHIJ. Imagine splitting it in the middle. 
@@ -811,7 +815,9 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 13. /
 14. /
 15. Map, each key element is unique and no repetition
-16.  <img src="images/ch17a.png" alt="ch17a" style="zoom:67%;" />
+16. From the textbook:
+
+    <img src="images/ch17a.png" alt="ch17a" style="zoom:67%;" />
 
 17. No repeated element, the character must be in ASCII with length smaller than 128
 
@@ -885,7 +891,8 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
     CS8 -> ()
     ```
 
-12. $$
+12. The matrix looks like:
+    $$
     \begin{bmatrix}
      0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
      0 & 0 & 1 & 1 & 1 & 0 & 0 & 0\\
@@ -897,7 +904,7 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
       0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
     \end{bmatrix}
     $$
-
+    
 13. Density (number of edges / number of nodes)
 
 14. Whether the graph is sparse (adjacency list) of dense (adjacency matrices)
@@ -955,16 +962,18 @@ Also Check 18.5 explanation
 
     Compiler: transform source code to machine code (binary form) and generate an exe file to execute (C++). Not suitable for cross-platform but has a much higher efficiency than Interpreter.
 
-14. <img src="images/ch19c.png" alt="ch19c" style="zoom:67%;" />
+14. From the textbook:
+
+    <img src="images/ch19c.png" alt="ch19c" style="zoom:67%;" />
 
 15. (No need to know in this course)
 
 <img src="images/ch19d.png" alt="ch19d" style="zoom:67%;" />
 
 16. An error. 
-17.  
+17. the block looks like:
 
-<img src="images/ch19e.png" alt="ch19e" style="zoom:67%;" />
+    <img src="images/ch19e.png" alt="ch19e" style="zoom:67%;" />
 
 18. /
 19. /
@@ -1018,7 +1027,9 @@ Also Check 18.5 explanation
 9. `bool (*fn) (int, int);`
 10.  The function serves as the parameter of other functions<img src="images/ch20b.png" alt="ch20b" style="zoom:67%;" />
 
-11.  <img src="images/ch20c.png" alt="ch20c" style="zoom:67%;" />
+11. From the textbook:
+
+    <img src="images/ch20c.png" alt="ch20c" style="zoom:67%;" />
 
 12. Function object: any object that overloads the function-call operator. Function pointers: a pointer pointing to a function. 
 13. `operator()`
@@ -1026,23 +1037,29 @@ Also Check 18.5 explanation
 <img src="images/ch20d.png" alt="ch20d" style="zoom:67%;" />
 
 14. `sort(v.begin(), v.end());` arguments are two iterators. 
-15.  <img src="images/ch20e.png" alt="ch20e" style="zoom:50%;" />
+15. From the slides:
+
+    <img src="images/ch20e.png" alt="ch20e" style="zoom:50%;" />
 
 16. F
 
 <img src="images/ch20f.png" alt="ch20f" style="zoom: 67%;" />
 
-17. 
+17. The function is: 
 
 <img src="images/ch20g.png" alt="ch20g" style="zoom:67%;" />
 
 18. `count_if(v.begin(), v.end(), bind2nd(less<int>(), 0))`
-19. <img src="images/ch20i.png" alt="ch20i" style="zoom:80%;" />
+19. The function looks like:
+
+    <img src="images/ch20i.png" alt="ch20i" style="zoom:80%;" />
 
 20. Define proc as a type “pointer to a function taking no argument and return no result”
 
 <img src="images/ch20j.png" alt="ch20j" style="zoom:67%;" />
 
-21.  <img src="images/ch21k.png" alt="ch21k" style="zoom: 80%;" />
+21. The iterator supports:
+
+    <img src="images/ch21k.png" alt="ch21k" style="zoom: 80%;" />
 
 22. F. Iterator acts as pointers. 
