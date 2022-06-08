@@ -1,8 +1,12 @@
 # CSC3002-Review-Question-Unofficial-Answer
 
+This file contains an unofficial answer of review questions to the textbook ("Programming Abstractions in C++", [textbook PDF)](https://cs.stanford.edu/people/eroberts/courses/cs106b/materials/CS106BX-Reader.pdf)) for CSC3002 in CUHK-Shenzhen.
 
+Each chapter's review questions page number (in the textbook pdf) is noted below, in the first line of each chapter's answer. 
 
 ## Ch1: Overview of C++
+
+**The review question of this chapter is at page 56.** 
 
 1. Source file.
 2. `//` and `/*  */`. 
@@ -64,6 +68,8 @@
 
 ## Ch2 Functions and Libraries
 
+**The review question of this chapter is at page 122.** 
+
 1. **Function:** receive an input, give an output, part of the program. **Program:** a complete executing unit.
 2. **Call:** Invoke the function. **Argument:** variables passed to the function. **Return:** function output value
 
@@ -116,6 +122,8 @@
 
 
 ## Ch3 Strings
+
+**The review question of this chapter is at page 156.** 
 
 1. String is the combination of characters (superset).
 2. False (If there is a space, it will only read the part before the space)
@@ -179,6 +187,8 @@
 
 ## Ch4 Streams
 
+**The review question of this chapter is at page 196.** 
+
 1. `fstream`, `ifstream`, `ofstream`
 
 2. `<<`: insertion operator  `>>`: extraction operator
@@ -241,6 +251,8 @@
 
 ## Ch5 Collections
 
+**The review question of this chapter is at page 253.** 
+
 1. True. (If you have come to my tutorial, you gonna remember this question, type like `int` / `char` / `double` are defined in representation) 
 2. Simplicity, Flexibility, Security
 3. Standard template library
@@ -290,6 +302,8 @@
 
 
 ## Ch6 Class
+
+**The review question of this chapter is at page 313.** 
 
 1. Find them in PPT
 2. public: Accessible and modifiable by instance object. private: Not accessible by external instance but in the internal class definition. The difference is whether it is available to the clients or not.
@@ -341,6 +355,8 @@ Date operator+(Date date, int delta) { }
 
 ## Ch7 Recursion
 
+**The review question of this chapter is at page 350.** 
+
 1. Invoke the function itself, iterate a certain collection/range. Yes. 
 2. The function makes use of the same structure of the problem to solve larger problem with smaller parameters and the same interface, invoke itself.
 3. $n$ may be smaller than 100. All $n \le 100$ should belong to the basic case.
@@ -385,6 +401,8 @@ int fib(int n){
 
 ## Ch8 Recursive Strategies
 
+**The review question of this chapter is at page 383.** 
+
 1. `tower(n,A,B,C) = tower(n-1,A,C,B) + 1(A->C) + tower(n-1,B,A,C)` (Move n disks from A to C = Move the up n-1 disks from A to B + Move the lowest disk from A to C + Move the n-1 disks from B to C)
 2. The b step will fail since larger disk cannot place upon smaller disk, the temporary spire is unavailable.
 3. A->C  A->C
@@ -403,6 +421,8 @@ int fib(int n){
 
 
 ## Ch9 Backtracking Algorithms
+
+**The review question of this chapter is at page 424.** 
 
 1. Iterative
 2. Put your right hand on the wall and follow. Yes.
@@ -438,6 +458,8 @@ int fib(int n){
 
 
 ## Ch10 Algorithmic Analysis
+
+**The review question of this chapter is at page 471.** 
 
 1. Iterative > recursive
 
@@ -483,6 +505,8 @@ int fib(int n){
 
 
 ## Ch11 Pointers and Arrays
+
+**The review question of this chapter is at page 516.** 
 
 1. Bit: The smallest memory unit, a single binary bit {0, 1}
 
@@ -573,6 +597,8 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 ## Ch12 Dynamic Memory Management
 
+**The review question of this chapter is at page 570.** 
+
 1. See the photo below: 
 
 <img src="images/ch12a.png" alt="ch12a" style="zoom:50%;" />
@@ -656,6 +682,8 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 ## Ch13 Efficiency and Representation
 
+**The review question of this chapter is at page 616.** 
+
 1. F  (Time + Space)
 2. What you see is what you get
 3. Use command line to edit texts
@@ -697,6 +725,8 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 ## Ch14 Linear Structures
 
+**The review question of this chapter is at page 666.** 
+
 1. More generality, can accommodate different types. No overloading one by one
 
 2. template `<typename placeholder>`
@@ -722,6 +752,8 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 
 ## Ch15 Maps
+
+**The review question of this chapter is at page 692.** 
 
 1. Order the Key. Binary search each time
 2. Inserting an element in a vector costs $O(N)$ to move elements right
@@ -762,6 +794,8 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 ## Ch16 Trees
 
+**The review question of this chapter is at page 732.** 
+
 1. Every node requires a collection to store the child nodes. No loop/circle formed.
 
 2. Family tree, C++ class inheritance…
@@ -799,6 +833,8 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 
 ## Ch17 Sets
+
+**The review question of this chapter is at page 770.** 
 
 1. T
 2. F
@@ -854,6 +890,8 @@ Word：The biggest bytes a CPU can process each time. Depend on the system, migh
 
 
 ## Ch18 Graphs
+
+**The review question of this chapter is at page 820.** 
 
 1. /
 
@@ -941,6 +979,8 @@ Also Check 18.5 explanation
 
 ## Ch19 Inheritance
 
+**The review question of this chapter is at page 883.** 
+
 1. `class SubClass: public SuperClass{ };`
 2. T (It can be non-template and no specification)
 3. F (The parameter lists may be different)
@@ -1002,6 +1042,8 @@ Also Check 18.5 explanation
 
 
 ## Ch20 Strategies for Iteration
+
+**The review question of this chapter is at page 928.** 
 
 1. ```cpp
    for (Set<int>::iterator it=primes.begin(); it!=primes.end(); it++)
